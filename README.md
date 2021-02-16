@@ -3,8 +3,6 @@ Sample application showing an Ionic Capacitor app on Zebra Android devices
 
 ##  TODO
 
-- Report the actual version of DataWedge
-- Retake screenshots
 - Tidy code
 - Update Readme
 

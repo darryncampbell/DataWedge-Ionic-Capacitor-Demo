@@ -53,7 +53,7 @@ export class HomePage {
         ////////////////////////////
   
         //  6.3 DataWedge APIs are available
-        events.subscribe('status:dw63ApisAvailable', (isAvailable) => {
+        events.subscribe('status:dw63ApisAvailable', (obj) => {
           console.log("DataWedge 6.3 APIs are available");
           //  We are able to create the profile under 6.3.  If no further version events are received, notify the user
           //  they will need to create the profile manually
@@ -73,14 +73,14 @@ export class HomePage {
         });
   
         //  6.4 Datawedge APIs are available
-        events.subscribe('status:dw64ApisAvailable', (isAvailable) => {
+        events.subscribe('status:dw64ApisAvailable', (obj) => {
           console.log("DataWedge 6.4 APIs are available");
   
           //  Documentation states the ability to set a profile config is only available from DW 6.4.
           //  For our purposes, this includes setting the decoders and configuring the associated app / output params of the profile.
           this.dataWedgeVersion = "6.4";
           this.uiDatawedgeVersionAttention = false;
-          this.uiHideDecoders = !isAvailable;
+          this.uiHideDecoders = !obj.available;
   
           //  Configure the created profile (associated app and keyboard plugin)
           let profileConfig = {
@@ -125,7 +125,7 @@ export class HomePage {
         });
   
         //  6.5 Datawedge APIs are available
-        events.subscribe('status:dw65ApisAvailable', (isAvailable) => {
+        events.subscribe('status:dw65ApisAvailable', (obj) => {
           console.log("DataWedge 6.5 APIs are available");
   
           //  The ability to switch to a new scanner is only available from DW 6.5 onwards
@@ -136,7 +136,7 @@ export class HomePage {
           //  6.5 also introduced messages which are received from the API to indicate success / failure
           this.uiHideCommandMessages = false;
           this.barcodeProvider.requestResult(true);
-          this.dataWedgeVersion = "6.5 or higher";
+          this.dataWedgeVersion = obj.version;
           this.changeDetectorRef.detectChanges();
         });
   
@@ -239,7 +239,6 @@ export class HomePage {
     let alert = await this.alertController.create({
       subHeader: 'Requires Zebra device',
       message: 'This application requires a Zebra mobile device in order to run',
-      cssClass: 'nonZebraAlert',
       buttons: [{
         text: 'Close app',
         handler: data => {

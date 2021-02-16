@@ -52,11 +52,11 @@ export class BarcodeService {
   
             //  Fire events sequentially so the application can gracefully degrade the functionality available on earlier DW versions
             if (datawedgeVersion >= "6.3")
-              constructorInstance.events.publish('status:dw63ApisAvailable', true);
+              constructorInstance.events.publish('status:dw63ApisAvailable', {"available":true, "version":datawedgeVersion});
             if (datawedgeVersion >= "6.4")
-              constructorInstance.events.publish('status:dw64ApisAvailable', true);
+              constructorInstance.events.publish('status:dw64ApisAvailable', {"available":true, "version":datawedgeVersion});
             if (datawedgeVersion >= "6.5")
-              constructorInstance.events.publish('status:dw65ApisAvailable', true);
+              constructorInstance.events.publish('status:dw65ApisAvailable', {"available":true, "version":datawedgeVersion});
           }
           else if (intent.extras.hasOwnProperty('com.symbol.datawedge.api.RESULT_ENUMERATE_SCANNERS')) {
             //  Return from our request to enumerate the available scanners

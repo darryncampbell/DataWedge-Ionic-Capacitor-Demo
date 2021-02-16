@@ -3,29 +3,22 @@
 * All rights reserved.
 */
 
-page-home {
-  .no-padding {
-      padding: 0px !important;
-  }
-  .hide {
-      visibility:hidden;
-  }
-  .show {
-      visibility:visible;
-  }
-  .attention {
-      background-color:#FFD200;
-      color:#000000;
-  }
 
+.no-padding {
+    padding: 0px !important;
+}
+.hide {
+    display:none;
+}
+.show {
+    display:block;
+}
+.attention {
+    background-color:#FFD200;
+    color:#000000;
 }
 
-.nonZebraAlert .alert-wrapper {
-  background-color:#FFD200;
-  button {
-      background-color: #ffffff;
-  }
-}
+
 
 /*
 #container {
