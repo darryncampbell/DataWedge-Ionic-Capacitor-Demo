@@ -1,3 +1,33 @@
+/*
+* Copyright (C) 2021 Zebra Technologies Corp
+* All rights reserved.
+*/
+
+page-home {
+  .no-padding {
+      padding: 0px !important;
+  }
+  .hide {
+      visibility:hidden;
+  }
+  .show {
+      visibility:visible;
+  }
+  .attention {
+      background-color:#FFD200;
+      color:#000000;
+  }
+
+}
+
+.nonZebraAlert .alert-wrapper {
+  background-color:#FFD200;
+  button {
+      background-color: #ffffff;
+  }
+}
+
+/*
 #container {
   text-align: center;
 
@@ -25,3 +55,4 @@
 #container a {
   text-decoration: none;
 }
+*/

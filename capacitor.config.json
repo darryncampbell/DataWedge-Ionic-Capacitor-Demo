@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.zebra.ioniccapacitordemo",
   "appName": "DW-Capacitor-Demo",
   "bundledWebRuntime": false,
   "npmClient": "npm",

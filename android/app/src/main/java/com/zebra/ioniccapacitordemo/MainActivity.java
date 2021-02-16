@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.zebra.ioniccapacitordemo;
 
 import android.os.Bundle;
 
