@@ -1,0 +1,7 @@
+{
+  "name": "DW-Capacitor-Demo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
