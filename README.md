@@ -1,19 +1,20 @@
 # DataWedge-Ionic-Capacitor-Demo
 Sample application showing an Ionic Capacitor app on Zebra Android devices
 
+
+
 ##  TODO
 
-- Tidy code
 - Update Readme
 
 ## Notes
 
 Prerequisites:
 
-- Install Capacitor https://capacitorjs.com/docs/getting-started
-- Additional Command line https://ionicframework.com/docs/cli/commands/capacitor-run
+- Install Capacitor [https://capacitorjs.com/docs/getting-started](https://capacitorjs.com/docs/getting-started)
+- Command line Reference [https://ionicframework.com/docs/cli/commands/capacitor-run](https://ionicframework.com/docs/cli/commands/capacitor-run)
 
-Download and prepare project:
+### Download and prepare project:
 
 ```
 git clone https://github.com/darryncampbell/DataWedge-Ionic-Capacitor-Demo.git
@@ -21,20 +22,19 @@ cd DataWedge-Ionic-Capacitor-Demo
 npm update
 npx cap update
 ```
-
-Running this project on Android (will launch Android Studio)
+### Running this project on Android (will launch Android Studio)
 
 ```
 ionic capacitor run android
 ```
 
-Building this project
+### Building this project
 
 ```
 ionic capacitor build android
 ```
 
-Adding plugin to new project:
+### Adding plugin to new project:
 
 ```
 npm i com-darryncampbell-cordova-plugin-intent
