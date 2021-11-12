@@ -1,3 +1,6 @@
+*Please be aware that this application / sample is provided as-is for demonstration purposes without any guarantee of support*
+=========================================================
+
 # DataWedge-Ionic-Capacitor-Demo
 
 This project shows a sample Ionic application with the Capacitor runtime which uses DataWedge to capture barcode data on Zebra Android mobile devices. 
