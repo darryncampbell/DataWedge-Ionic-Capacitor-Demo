@@ -48,14 +48,15 @@ export class BarcodeService {
             var versionInfo = intent.extras['com.symbol.datawedge.api.RESULT_GET_VERSION_INFO'];
             console.log('Version Info: ' + JSON.stringify(versionInfo));
             let datawedgeVersion = versionInfo['DATAWEDGE'];
+            datawedgeVersion = datawedgeVersion.padStart(5, "0");
             console.log("Datawedge version: " + datawedgeVersion);
   
             //  Fire events sequentially so the application can gracefully degrade the functionality available on earlier DW versions
-            if (datawedgeVersion >= "6.3")
+            if (datawedgeVersion >= "006.3")
               constructorInstance.events.publish('status:dw63ApisAvailable', {"available":true, "version":datawedgeVersion});
-            if (datawedgeVersion >= "6.4")
+            if (datawedgeVersion >= "006.4")
               constructorInstance.events.publish('status:dw64ApisAvailable', {"available":true, "version":datawedgeVersion});
-            if (datawedgeVersion >= "6.5")
+            if (datawedgeVersion >= "006.5")
               constructorInstance.events.publish('status:dw65ApisAvailable', {"available":true, "version":datawedgeVersion});
           }
           else if (intent.extras.hasOwnProperty('com.symbol.datawedge.api.RESULT_ENUMERATE_SCANNERS')) {
@@ -103,4 +104,6 @@ export class BarcodeService {
       function () { }   //  Failure in sending the intent, not failure of DW to process the intent.
     );
   }
+
+
 }
